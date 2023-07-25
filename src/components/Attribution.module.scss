@@ -1,0 +1,38 @@
+@use "../sass/components/variables" as *;
+
+.attribution {
+  width: 100%;
+  text-align: center;
+  color: $clr-neutral-100;
+  font-weight: $fw-bold;
+  margin-top: 1rem;
+
+  a {
+    color: $clr-primary;
+  }
+
+  @media only screen and (min-width: 60em) {
+    a {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 0.125rem;
+        width: 100%;
+        bottom: -0.1rem;
+        left: 0;
+        background-color: $clr-primary;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.2s ease;
+      }
+      &:hover {
+        filter: brightness(1.25);
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+  }
+}

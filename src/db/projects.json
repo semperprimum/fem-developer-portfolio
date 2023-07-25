@@ -1,0 +1,50 @@
+[
+  {
+    "name": "design portfolio",
+    "technologies": ["html", "css"],
+    "images": {
+      "small": "/assets/images/thumbnail-project-1-small.webp",
+      "large": "/assets/images/thumbnail-project-1-large.webp"
+    }
+  },
+  {
+    "name": "e-learning landing page",
+    "technologies": ["html", "css"],
+    "images": {
+      "small": "/assets/images/thumbnail-project-2-small.webp",
+      "large": "/assets/images/thumbnail-project-2-large.webp"
+    }
+  },
+  {
+    "name": "todo web app",
+    "technologies": ["html", "css", "javascript"],
+    "images": {
+      "small": "/assets/images/thumbnail-project-3-small.webp",
+      "large": "/assets/images/thumbnail-project-3-large.webp"
+    }
+  },
+  {
+    "name": "entertainment web app",
+    "technologies": ["html", "css", "javascript"],
+    "images": {
+      "small": "/assets/images/thumbnail-project-4-small.webp",
+      "large": "/assets/images/thumbnail-project-4-large.webp"
+    }
+  },
+  {
+    "name": "memory game",
+    "technologies": ["html", "css", "javascript"],
+    "images": {
+      "small": "/assets/images/thumbnail-project-5-small.webp",
+      "large": "/assets/images/thumbnail-project-5-large.webp"
+    }
+  },
+  {
+    "name": "art gallery showcase",
+    "technologies": ["html", "css", "javascript"],
+    "images": {
+      "small": "/assets/images/thumbnail-project-6-small.webp",
+      "large": "/assets/images/thumbnail-project-6-large.webp"
+    }
+  }
+]

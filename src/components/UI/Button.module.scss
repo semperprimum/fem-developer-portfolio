@@ -1,0 +1,32 @@
+@use "../../sass/components/variables" as *;
+
+.btn {
+  position: relative;
+  color: $clr-neutral-100;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  line-height: 1.625;
+  padding-inline: 0;
+  letter-spacing: 0.14288rem;
+  padding-bottom: 0.745rem;
+  cursor: pointer;
+  transition: color 175ms ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: $clr-primary;
+  }
+
+  @media only screen and (min-width: 60em) {
+    &:hover {
+      color: $clr-primary;
+    }
+  }
+}

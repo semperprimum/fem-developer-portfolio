@@ -1,0 +1,40 @@
+@use "./variables" as *;
+.clr-primary {
+  color: $clr-primary;
+}
+.clr-neutral-900 {
+  color: $clr-neutral-900;
+}
+.clr-neutral-700 {
+  color: $clr-neutral-700;
+}
+.clr-neutral-200 {
+  color: $clr-neutral-200;
+}
+.clr-neutral-100 {
+  color: $clr-neutral-100;
+}
+.fs-400 {
+  font-size: $fs-400;
+}
+.fs-500 {
+  font-size: $fs-500;
+}
+.fs-550 {
+  font-size: $fs-550;
+}
+.fs-600 {
+  font-size: $fs-600;
+}
+.fs-700 {
+  font-size: $fs-700;
+}
+.fs-800 {
+  font-size: $fs-800;
+}
+.fw-bold {
+  font-weight: $fw-bold;
+}
+.fw-regular {
+  font-weight: $fw-regular;
+}

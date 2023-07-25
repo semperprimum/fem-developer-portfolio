@@ -1,0 +1,470 @@
+@use "./components/utils" as *;
+@use "./components/variables" as *;
+@use "./components/reset";
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+
+body {
+  font-family: "Space Grotesk";
+  background-color: $clr-neutral-900;
+  padding-top: 1.25rem;
+
+  background-image: url("/assets/images/image-profile-mobile.webp"),
+    url("/assets/images/pattern-rings.svg"),
+    url("/assets/images/pattern-circle.svg"),
+    url("/assets/images/pattern-rings.svg");
+  background-size: 10.875rem, auto, auto, auto;
+  background-repeat: no-repeat;
+  background-position: top center, top 7.75rem left -22.08rem,
+    top 15.88rem right -4rem, top 79.6rem right -22.08rem;
+}
+
+.links {
+  text-align: center;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 1.25rem;
+    gap: 1.6rem;
+  }
+  &__item {
+    svg {
+      display: block;
+      max-height: 1.25rem;
+    }
+  }
+}
+
+.intro {
+  margin-inline: $padding-x;
+  margin-top: 20.69rem;
+  text-align: center;
+  margin-bottom: 5rem;
+
+  &__heading {
+    line-height: 1;
+
+    span {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0.15rem;
+        left: 0;
+        height: 0.25rem;
+        background-color: $clr-primary;
+      }
+    }
+  }
+  &__body {
+    margin-top: 1rem;
+    line-height: 1.625;
+  }
+  &__button {
+    display: block;
+    margin-inline: auto;
+    white-space: nowrap;
+    max-width: min-content;
+    text-align: left;
+    margin-top: 1.5rem;
+  }
+}
+
+.skills {
+  text-align: center;
+  padding-block: 2.5rem;
+  margin-inline: $padding-x;
+  border-top: 0.0625rem solid $clr-neutral-200;
+  border-bottom: 0.0625rem solid $clr-neutral-200;
+  &__list {
+    display: grid;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  &__technology {
+    line-height: 1.25;
+  }
+  &__experience {
+    line-height: 1.625;
+  }
+}
+
+.projects {
+  margin-top: 5rem;
+  margin-inline: $padding-x;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 2.5rem;
+  }
+  &__buttons-image {
+    display: none;
+  }
+  &__buttons {
+    display: flex;
+    gap: 1.88rem;
+  }
+  &__name {
+    display: block;
+    margin-top: 1.25rem;
+    text-transform: uppercase;
+  }
+  &__technology__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.13rem;
+    text-transform: uppercase;
+    margin-top: 0.44rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.contact {
+  background-color: $clr-neutral-700;
+  margin-top: 5rem;
+  padding-inline: $padding-x;
+  padding-top: 3.75rem;
+  text-align: center;
+  background-image: url("/assets/images/pattern-rings.svg");
+  background-repeat: no-repeat;
+  background-position: top 27.25rem left -22.08rem;
+  &__heading {
+    line-height: 1;
+    letter-spacing: -0.071rem;
+  }
+  &__body {
+    line-height: 1.625;
+    margin-top: 1.25rem;
+    margin-bottom: 3rem;
+  }
+  &__content {
+    margin-bottom: 3.12rem;
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+
+    &.error {
+      border-color: $clr-secondary;
+    }
+  }
+  &__button {
+    display: block;
+    max-width: min-content;
+    white-space: nowrap;
+    justify-self: end;
+  }
+  &__form {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 5.5rem;
+    border-bottom: 0.0625rem solid $clr-neutral-100;
+    margin-bottom: 2.5rem;
+  }
+  &__input-control {
+    display: grid;
+    gap: 0.3rem;
+  }
+  &__error {
+    font-size: 0.75rem;
+    justify-self: end;
+    color: $clr-secondary;
+  }
+  padding-bottom: 3.75rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  body {
+    padding-top: 1.8rem;
+
+    background-image: url("/assets/images/pattern-circle.svg"),
+      url("/assets/images/image-profile-tablet.webp"),
+      url("/assets/images/pattern-rings.svg"),
+      url("/assets/images/pattern-rings.svg");
+    background-size: auto, 20.125rem, auto, auto;
+    background-repeat: no-repeat;
+    background-position: top 29.44rem right -4rem, top right,
+      top 5.37rem left -16.5rem, top 66.5rem right -22.08rem;
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: $padding-x;
+    &__list {
+      margin-top: 0;
+    }
+  }
+  .intro {
+    text-align: start;
+    margin-top: 5.63rem;
+    margin-bottom: 3.75rem;
+
+    &__heading {
+      max-width: 27rem;
+      letter-spacing: -0.12781rem;
+    }
+    &__body {
+      margin-top: 4.13rem;
+      margin-bottom: 2.12rem;
+      max-width: 27rem;
+    }
+    &__button {
+      margin-inline: revert;
+    }
+  }
+  .skills {
+    padding-block: revert;
+    padding-top: 3.25rem;
+    text-align: start;
+    border-bottom: none;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 0.5rem;
+      row-gap: 3.25rem;
+    }
+    &__item {
+      display: grid;
+      gap: 0.88rem;
+    }
+  }
+  .projects {
+    margin-top: 6.25rem;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.25rem;
+      row-gap: 3.75rem;
+    }
+  }
+  .contact {
+    margin-top: 6.25rem;
+    background-position: top 34.5rem left -22.08rem;
+    &__content,
+    &__form {
+      max-width: 27.8125rem;
+      margin-inline: auto;
+      border-bottom: none;
+    }
+    &__form {
+      margin-bottom: 5.75rem;
+      padding-bottom: 0;
+    }
+  }
+  footer.links {
+    padding-top: 1.88rem;
+    border-top: 0.0625rem solid $clr-neutral-100;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  body {
+    padding-top: 2rem;
+    padding-inline: 1rem;
+    background-image: url("/assets/images/pattern-circle.svg"),
+      url("/assets/images/image-profile-desktop.webp"),
+      url("/assets/images/pattern-rings.svg"),
+      url("/assets/images/pattern-rings.svg");
+    background-size: auto, 27.8125rem, auto, auto;
+    background-repeat: no-repeat;
+    background-position: top 32.56rem right 34.06rem, top right 16.5%,
+      top 8.31rem left -6.25rem, top 67.31rem right -15rem;
+  }
+  .wrapper {
+    max-width: 69.375rem;
+    margin-inline: auto;
+    .links__list {
+      margin-right: 1.84rem;
+    }
+  }
+  .links {
+    &__list {
+      gap: 1.95rem;
+    }
+    &__item {
+      svg {
+        max-height: revert;
+      }
+    }
+  }
+  .intro {
+    margin-top: 7.3rem;
+    &__heading {
+      letter-spacing: -0.15625rem;
+      max-width: 45rem;
+      span {
+        &::after {
+          height: 0.375rem;
+          z-index: -1;
+          bottom: 0.35rem;
+        }
+      }
+    }
+    &__body {
+      margin-top: 2.69rem;
+      margin-bottom: 4.2rem;
+      line-height: 1.55556;
+    }
+  }
+  .skills {
+    margin-top: 13.69rem;
+    padding-top: 4.5rem;
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      margin-left: 0.35rem;
+      column-gap: 1.6rem;
+      row-gap: 3.63rem;
+    }
+    &__item {
+      gap: 0.88rem;
+    }
+    &__technology {
+      letter-spacing: -0.09375rem;
+      line-height: 1.16667;
+    }
+    &__experience {
+      line-height: 1.55556;
+    }
+  }
+  .projects {
+    margin-top: 8.75rem;
+    &__heading {
+      line-height: 1;
+      letter-spacing: -0.15625rem;
+    }
+    &__list {
+      margin-top: 5rem;
+      column-gap: 1.87rem;
+      row-gap: 4.31rem;
+    }
+
+    &__buttons {
+      display: none;
+    }
+    &__technology__list {
+      margin-bottom: 0;
+      margin-top: 0.44rem;
+    }
+    &__name {
+      margin-top: 1.25rem;
+      line-height: 1.33333;
+    }
+    &__img-wrapper {
+      position: relative;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0;
+        transition: opacity 0.175s ease;
+      }
+      &:hover {
+        &::after {
+          opacity: 0.75;
+        }
+        .projects__buttons-image {
+          visibility: visible;
+        }
+      }
+    }
+    &__buttons-image {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      gap: 3rem;
+      z-index: 5;
+      visibility: hidden;
+    }
+  }
+  .contact {
+    text-align: start;
+    padding-top: 5.25rem;
+    margin-top: 8.8rem;
+    width: 100vw;
+    margin-left: -1rem;
+    background-position: top 20.5rem left -12.85rem;
+
+    &__content,
+    &__form {
+      max-width: revert;
+      width: 100%;
+    }
+    &__content {
+      max-width: 27.8125rem;
+      margin-inline: revert;
+      margin-bottom: 0;
+    }
+    &__form {
+      max-width: 27.8125rem;
+      margin-inline: revert;
+      margin-left: auto;
+      margin-bottom: 5.6rem;
+    }
+    &__content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 69.375rem;
+      margin-inline: auto;
+    }
+    &__heading {
+      letter-spacing: -0.15625rem;
+      line-height: 1;
+    }
+    &__body {
+      margin-top: 2.25rem;
+      line-height: 1.55556;
+    }
+    &__button {
+      transform: translateY(-0.1rem);
+    }
+    .links {
+      padding-top: 2.3rem;
+      &__list {
+        gap: 1.95rem;
+      }
+      &__item {
+        svg {
+          max-height: revert;
+        }
+      }
+    }
+  }
+  footer {
+    grid-column: 1 /3;
+  }
+}
