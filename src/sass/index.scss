@@ -12,6 +12,7 @@ body {
   font-family: "Space Grotesk";
   background-color: $clr-neutral-900;
   padding-top: 1.25rem;
+  overflow-x: hidden;
 
   background-image: url("/assets/images/image-profile-mobile.webp"),
     url("/assets/images/pattern-rings.svg"),
@@ -39,6 +40,8 @@ body {
     svg {
       display: block;
       max-height: 1.25rem;
+      fill: $clr-neutral-100;
+      transition: fill 175ms ease;
     }
   }
 }
@@ -307,6 +310,11 @@ body {
     &__item {
       svg {
         max-height: revert;
+      }
+    }
+    a:hover {
+      svg {
+        fill: $clr-primary;
       }
     }
   }
