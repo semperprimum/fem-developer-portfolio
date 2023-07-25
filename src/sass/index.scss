@@ -441,7 +441,7 @@ body {
       max-width: 27.8125rem;
       margin-inline: revert;
       margin-left: auto;
-      margin-bottom: 5.6rem;
+      margin-bottom: 5.5rem;
     }
     &__content-wrapper {
       display: grid;
@@ -462,6 +462,7 @@ body {
     }
     .links {
       padding-top: 2.3rem;
+      border-top: 0.0625rem solid $clr-neutral-100;
       &__list {
         gap: 1.95rem;
       }
